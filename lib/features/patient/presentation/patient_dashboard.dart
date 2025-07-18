@@ -10,20 +10,28 @@ class PatientDashboard extends StatelessWidget {
       body: ListView(
         padding: const EdgeInsets.all(16),
         children: [
-          ListTile(
-            leading: const Icon(Icons.upload_file),
-            title: const Text('Envoyer un résultat d\'analyse'),
-            onTap: () => Navigator.pushNamed(context, '/analysis_form'),
+          Card(
+            child: ListTile(
+              leading: const Icon(Icons.upload_file),
+              title: const Text("Envoyer un résultat d'analyse"),
+              onTap: () => Navigator.pushNamed(context, '/analysis_form'),
+            ),
           ),
-          ListTile(
-            leading: const Icon(Icons.history),
-            title: const Text('Historique des consultations'),
-            onTap: () {},
+          const SizedBox(height: 12),
+          Card(
+            child: ListTile(
+              leading: const Icon(Icons.history),
+              title: const Text('Historique des consultations'),
+              onTap: () {},
+            ),
           ),
-          ListTile(
-            leading: const Icon(Icons.account_circle),
-            title: const Text('Mon compte'),
-            onTap: () {},
+          const SizedBox(height: 12),
+          Card(
+            child: ListTile(
+              leading: const Icon(Icons.account_circle),
+              title: const Text('Mon compte'),
+              onTap: () {},
+            ),
           ),
         ],
       ),
