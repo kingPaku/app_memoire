@@ -5,6 +5,7 @@ import 'features/auth/presentation/register_page.dart';
 import 'features/patient/presentation/patient_dashboard.dart';
 import 'features/professional/presentation/pro_dashboard.dart';
 import 'features/patient/presentation/analysis_form.dart';
+import 'theme/app_theme.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,11 +17,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'SafeLab',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
-        useMaterial3: true,
-      ),
+      theme: AppTheme.lightTheme,
       routes: {
         '/': (context) => const WelcomePage(),
         '/login': (context) {

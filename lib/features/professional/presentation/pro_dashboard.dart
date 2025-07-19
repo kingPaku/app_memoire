@@ -10,15 +10,20 @@ class ProfessionalDashboard extends StatelessWidget {
       body: ListView(
         padding: const EdgeInsets.all(16),
         children: [
-          ListTile(
-            leading: const Icon(Icons.inbox),
-            title: const Text('Résultats reçus'),
-            onTap: () {},
+          Card(
+            child: ListTile(
+              leading: const Icon(Icons.inbox),
+              title: const Text('Résultats reçus'),
+              onTap: () {},
+            ),
           ),
-          ListTile(
-            leading: const Icon(Icons.settings),
-            title: const Text('Paramètres'),
-            onTap: () {},
+          const SizedBox(height: 12),
+          Card(
+            child: ListTile(
+              leading: const Icon(Icons.settings),
+              title: const Text('Paramètres'),
+              onTap: () {},
+            ),
           ),
         ],
       ),
